@@ -188,7 +188,7 @@ export default class Pokemon extends Component {
           <div className="card-header">
             <div className="row">
               <div className="col-5">
-                <h5>{this.state.pokemonIndex}</h5>
+                <h5>#{this.state.pokemonIndex}</h5>
               </div>
               <div className="col-7">
                 <div className="float-right">
@@ -438,6 +438,12 @@ export default class Pokemon extends Component {
                 </div>
               </div>
             </div>
+          </div>
+          <div class="card-footer">
+            Data From{" "}
+            <a href="https://pokeapi.co/" target="_blank" className="card-link">
+              PokeAPI.co
+            </a>
           </div>
         </div>
       </div>
