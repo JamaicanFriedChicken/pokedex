@@ -9,11 +9,6 @@ const Sprite = styled.img`
     width: 5em;
     height 5em;
     display: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
 `;
 
 const Card = styled.div`
@@ -32,6 +27,7 @@ const Card = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
+
   &:focus,
   &:hover,
   &:visited,
@@ -104,7 +100,7 @@ export default class PokemonCard extends Component {
                     letter =>
                       letter.charAt(0).toUpperCase() + letter.substring(1)
                   )
-                  .join("")}
+                  .join(" ")}
               </h6>
             </div>
           </Card>
