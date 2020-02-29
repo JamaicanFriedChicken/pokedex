@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import logo from "../layout/pokedex.png";
 // import styled from "styled-components";
 
 export default class NavBar extends Component {
@@ -6,9 +7,9 @@ export default class NavBar extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-          <a className="navbar-brand col-sm-3 col-md-2 mr-0 align-items-center">
-            Pokedex
-          </a>
+          {/* <a className="navbar-brand col-sm-3 col-md-2 mr-0 align-items-center"> */}
+          <img src={logo} height="30" width="150" />
+          {/* </a> */}
         </nav>
       </div>
     );

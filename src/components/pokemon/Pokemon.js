@@ -61,8 +61,6 @@ export default class Pokemon extends Component {
     const imageUrl = pokemonResponse.data.sprites.front_default;
     const shinyImageUrl = pokemonResponse.data.sprites.front_shiny;
 
-    // this.setState({ name });
-
     let { hp, attack, defense, speed, specialAttack, specialDefense } = "";
 
     pokemonResponse.data.stats.map(stat => {
