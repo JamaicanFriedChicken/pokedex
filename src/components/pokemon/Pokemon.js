@@ -59,6 +59,7 @@ export default class Pokemon extends Component {
 
     const name = pokemonResponse.data.name;
     const imageUrl = pokemonResponse.data.sprites.front_default;
+    const shinyImageUrl = pokemonResponse.data.sprites.front_shiny;
 
     // this.setState({ name });
 
@@ -163,6 +164,7 @@ export default class Pokemon extends Component {
 
     this.setState({
       imageUrl,
+      shinyImageUrl,
       pokemonIndex,
       name,
       types,
@@ -215,12 +217,22 @@ export default class Pokemon extends Component {
           <div className="card-body">
             <div className="row align-items-center">
               <div className="col-md-3">
+                <h6 className="mx-auto text-center">Normal</h6>
                 <img
                   src={this.state.imageUrl}
+                  alt="Pokemon Sprite"
                   className="card-img-top rounded mx-auto mt-2"
                 />
               </div>
-              <div className="col-md-9">
+              <div className="col-md-3">
+                <h6 className="mx-auto text-center">Shiny</h6>
+                <img
+                  src={this.state.shinyImageUrl}
+                  alt="Shiny Sprite"
+                  className="card-img-top rounded mx-auto mt-2"
+                />
+              </div>
+              <div className="col-md-6">
                 <h4 className="mx-auto">
                   {this.state.name
                     .toLowerCase()
@@ -230,7 +242,7 @@ export default class Pokemon extends Component {
                 </h4>
                 <div className="row align-items-center">
                   <div className="col-12 col-md-3">HP</div>
-                  <div className="col-12 col-md-9">
+                  <div className="col-12 col-md-6">
                     <div className="progress">
                       <div
                         className="progress-bar"
@@ -249,7 +261,7 @@ export default class Pokemon extends Component {
                 </div>
                 <div className="row align-items-center">
                   <div className="col-12 col-md-3">Attack</div>
-                  <div className="col-12 col-md-9">
+                  <div className="col-12 col-md-6">
                     <div className="progress">
                       <div
                         className="progress-bar"
@@ -268,7 +280,7 @@ export default class Pokemon extends Component {
                 </div>
                 <div className="row align-items-center">
                   <div className="col-12 col-md-3">Defense</div>
-                  <div className="col-12 col-md-9">
+                  <div className="col-12 col-md-6">
                     <div className="progress">
                       <div
                         className="progress-bar"
@@ -287,7 +299,7 @@ export default class Pokemon extends Component {
                 </div>
                 <div className="row align-items-center">
                   <div className="col-12 col-md-3">Speed</div>
-                  <div className="col-12 col-md-9">
+                  <div className="col-12 col-md-6">
                     <div className="progress">
                       <div
                         className="progress-bar"
@@ -305,8 +317,8 @@ export default class Pokemon extends Component {
                   </div>
                 </div>
                 <div className="row align-items-center">
-                  <div className="col-12 col-md-3">Special Attack</div>
-                  <div className="col-12 col-md-9">
+                  <div className="col-12 col-md-3">Sp. Attack</div>
+                  <div className="col-12 col-md-6">
                     <div className="progress">
                       <div
                         className="progress-bar"
@@ -324,8 +336,8 @@ export default class Pokemon extends Component {
                   </div>
                 </div>
                 <div className="row align-items-center">
-                  <div className="col-12 col-md-3">special Defense</div>
-                  <div className="col-12 col-md-9">
+                  <div className="col-12 col-md-3">Sp. Defense</div>
+                  <div className="col-12 col-md-6">
                     <div className="progress">
                       <div
                         className="progress-bar"
