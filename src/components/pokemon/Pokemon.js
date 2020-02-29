@@ -217,7 +217,6 @@ export default class Pokemon extends Component {
           <div className="card-body">
             <div className="row align-items-center">
               <div className="col-md-3">
-                <h6 className="mx-auto text-center">Normal</h6>
                 <img
                   src={this.state.imageUrl}
                   alt="Pokemon Sprite"
@@ -225,7 +224,6 @@ export default class Pokemon extends Component {
                 />
               </div>
               <div className="col-md-3">
-                <h6 className="mx-auto text-center">Shiny</h6>
                 <img
                   src={this.state.shinyImageUrl}
                   alt="Shiny Sprite"
